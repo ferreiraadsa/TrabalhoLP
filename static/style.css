@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #000; /* preto */
+  color: white;
+}
+
+header {
+  background-color: #000;
+  text-align: center;
+  padding: 2rem;
+}
+
+.top_bar {
+    background-color: #32CD32; /* verde limão */
+    width: 100vw;
+    height: 10vw;
+}
+
+.logo {
+    background-color: #32CD32; /* verde limão */
+    width: 100vw;
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center;     /* centraliza verticalmente, caso tenha altura definida */
+}
+
+.logo img {
+    width: 13vw;
+    height: auto;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+}
+
+.slogan {
+  color: #32CD32; /* verde limão */
+  font-weight: bold;
+}
