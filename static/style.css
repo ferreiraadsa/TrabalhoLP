@@ -13,7 +13,7 @@ body {
 /* === BARRA SUPERIOR === */
 .toolbar {
   width: 100vw;
-  height: 10vh;
+  min-height: 10vh;
   background: rgba(0, 0, 0, 0.75);
   position: fixed;
   top: 0;
@@ -23,16 +23,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   border-bottom: 1px solid #0af;
+  flex-wrap: wrap; /* permite que o conteúdo quebre a linha, se necessário */
 }
 
 .name {
   margin: 0;
   color: #0af;
-  font-size: 5.5vh;
+  font-size: clamp(1.2rem, 5vw, 5.5vh); /* responsivo e adaptável */
   font-weight: bold;
   letter-spacing: 1px;
+  text-align: center;
+  white-space: normal; /* permite quebra de linha se for necessário */
+  word-break: break-word; /* quebra longas palavras */
+  max-width: 90vw; /* impede que ultrapasse os limites horizontais */
 }
 
 /* === BLOCO COMUM (estilo glassmorphism) === */
