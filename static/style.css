@@ -1,39 +1,149 @@
+/* === GERAL === */
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #000; /* preto */
-  color: white;
+  background: url("https://cdn.imgchest.com/files/y2pckl56mr7.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  padding-top: 12vh;
+  line-height: 1.6;
+  backdrop-filter: blur(2px);
 }
 
-header {
-  background-color: #000;
-  text-align: center;
-  padding: 2rem;
+/* === BARRA SUPERIOR === */
+.toolbar {
+  width: 100vw;
+  height: 10vh;
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #0af;
 }
 
-.top_bar {
-    background-color: #32CD32; /* verde limão */
-    width: 100vw;
-    height: 10vw;
-}
-
-.logo {
-    background-color: #32CD32; /* verde limão */
-    width: 100vw;
-    display: flex;
-    justify-content: center; /* centraliza horizontalmente */
-    align-items: center;     /* centraliza verticalmente, caso tenha altura definida */
-}
-
-.logo img {
-    width: 13vw;
-    height: auto;
-    display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center;     /* vertical */
-}
-
-.slogan {
-  color: #32CD32; /* verde limão */
+.name {
+  margin: 0;
+  color: #0af;
+  font-size: 5.5vh;
   font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* === BLOCO COMUM (estilo glassmorphism) === */
+.introduction,
+.article {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 80vw;
+  max-width: 750px;
+  min-width: 300px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.introduction:hover,
+.article:hover {
+  transform: scale(1.01);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* === INTRODUÇÃO === */
+.introduction .title {
+  color: #fff;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.introduction .subtitle {
+  color: #aadcff;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.introduction .lead {
+  color: #fff;
+  text-align: justify;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* === ARTIGO === */
+.article h3 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.article p {
+  color: #fff;
+  text-align: justify;
+  font-size: 1rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.article ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.article ul li {
+  margin-bottom: 0.5rem;
+  list-style-type: disc;
+  color: #fff;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.article blockquote {
+  border-left: 4px solid #0af;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  color: #aadcff;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.article .quote-highlight {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #0cf;
+  margin: 2rem 0;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* === RESPONSIVO === */
+@media screen and (max-width: 768px) {
+  .introduction, .article {
+    width: 90vw;
+    padding: 1rem;
+  }
+
+  .name {
+    font-size: 4.5vh;
+  }
+
+  .introduction .title {
+    font-size: 1.8rem;
+  }
+
+  .introduction .subtitle {
+    font-size: 1rem;
+  }
 }
